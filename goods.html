@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="zh-HANT" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>商品頁</title>
+    <style media="screen">
+      *{
+        box-sizing:border-box;
+        text-decoration:none;
+      }
+      header nav{
+        /* border:1px solid red; */
+        min-width:800px;
+        /* height:300px; */
+        position:relative;
+        width:1200px;
+        margin:0 auto;
+        background-image:url("./pic/banner_pic.jpg")
+        /* height:300px; */
+        /* background-repeat:no-repeat; */
+        /* min-width:800px; */
+
+      }
+      header nav>a{
+        /* border:1px solid black; */
+        display:inline-block;
+        font-size:0px;
+        margin:10px 0 0 10px;
+      }
+      header nav>a>img{
+        /* border:1px solid yellow; */
+        display:inline-block;
+        width:100px;
+      }
+      header>nav>input{
+        display:inine-block;
+        /* border:1px solid red; */
+        margin-left:300px;
+        margin-right:250px;
+        position:absolute;
+        bottom:5px;
+      }
+      header>nav>ul{
+        display:inline-block;
+        padding:0;
+        /* border:1px solid black; */
+        list-style:none;
+        position:absolute;
+        margin:0;
+        bottom:0;
+        right:0;
+
+      }
+      header>nav>ul li{
+        /* border:1px solid yellow; */
+        display:inline-block;
+        margin-left:10px;
+        padding:5px 5px 0 5px;
+      }
+      header>nav>ul li a{
+        text-decoration:none;
+      }
+      main{
+        /* border:1px solid red; */
+        width:1200px;
+        margin:0 auto;
+        /* position:relative; */
+        background-color:#FDA2A2;
+      }
+      main div.type_choose{
+
+        /* border:1px solid yellow; */
+        text-align:center;
+      }
+
+      main div.type_choose a.sweet{
+        font-size:60px;
+      }
+      main div.goods ul{
+        border:1px solid red;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto;
+        gap: 20px;
+        list-style:none;
+        padding:0;
+      }
+      main div.goods ul li{
+        border:1px solid blue;
+      }
+      main div.bookmark ul{
+        /* border:1px solid red; */
+        list-style:none;
+        padding:0;
+      }
+      main div.bookmark ul div{
+        /* border:1px solid blue; */
+
+        padding:0;
+        margin:0 auto;
+        text-align:center;
+      }
+      main div.bookmark ul li{
+        /* border:1px solid yellow; */
+        display:inline-block;
+        padding:5px;
+
+      }
+      footer{
+        width:1200px;
+        margin:0 auto;
+        background-color:#FB8989;
+      }
+      footer div.copyriht{
+        /* border:1px solid black; */
+        /* position:relative; */
+        text-align:center;
+        /* margin:10px; */
+      }
+      footer div.copyriht p{
+        margin:0;
+      }
+    </style>
+  </head>
+  <body>
+
+    <header>
+      <nav class="">
+        <a href="#">
+          <img src="./pic/onlinekitchen_text.png" alt="">
+        </a>
+        <input type="text" name="" value="">
+        <ul>
+          <li><a href="#">隨便看看</a></li>
+          <li><a href="#">註冊/登入</a></li>
+          <li><a href="#">購物車</a></li>
+          <li><a href="#">會員紀錄</a></li>
+        </ul>
+      </nav>
+      <div class="advertise">
+        <main class="pic">
+          <div class="left_arrow">
+
+          </div>
+          <div class="right_arrow">
+
+          </div>
+          <div class="pic_dot">
+
+          </div>
+        </main>
+      </div>
+    </header>
+
+    <main>
+      <div class="type_choose">
+        <a href="#" class="sweet">甜/</a>
+        <a href="#" class="salt">鹹</a>
+      </div>
+
+      <div class="goods">
+        <ul>
+          <li>第一項</li>
+          <li>第二項</li>
+          <li>第三項</li>
+          <li>第四項</li>
+          <li>第五項</li>
+          <li>第六項</li>
+          <li>第七項</li>
+          <li>第八項</li>
+          <li>第九項</li>
+        </ul>
+      </div>
+      <div class="bookmark">
+        <ul>
+          <div>
+            <li><a href="#">&lt;</a></li>
+            <li><a href="#">1</a></li>
+            <li><a href="#">2</a></li>
+            <li><a href="#">3</a></li>
+            <li><a href="#">4</a></li>
+            <li><a href="#">5</a></li>
+            <li><a href="#">6</a></li>
+            <li><a href="#">7</a></li>
+            <li><a href="#">8</a></li>
+            <li><a href="#">9</a></li>
+            <li><a href="#">&gt;</a></li>
+          </div>
+        </ul>
+      </div>
+    </main>
+
+    <footer>
+      <div class="copyriht">
+        <p>&copy 僅供緯育tibeme教學之用</p>
+      </div>
+    </footer>
+  </body>
+</html>
