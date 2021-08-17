@@ -1,0 +1,18 @@
+footer{
+  width:1200px;
+  margin:5px auto;
+  background-color:#FB8989;
+  position:relative;
+  /* top:-1rem; */
+}
+div.copyriht{
+  /* border:1px solid black; */
+  /* position:relative; */
+  text-align:center;
+  /* margin:10px; */
+}
+div.copyriht p{
+  font-size: 16px;
+  margin:0;
+
+}

@@ -1,0 +1,38 @@
+div.progress_bar{
+  /* border:1px solid red; */
+  width:300px;
+  margin:20px auto;
+  display:flex;
+  justify-content:space-between;
+  /* z-index:100; */
+}
+div.progress_bar>div{
+  /* margin:10px; */
+  /* border:1px solid yellow; */
+  background-color:#ffffaa;
+  border-radius:50%;
+  width:40px;
+  height:40px;
+  position:relative;
+}
+div.progress_bar>div:nth-child(3){
+  background-color:#FDA2A2;
+
+}
+div.progress_bar>div>p{
+  /* border:1px solid red; */
+  /* width:30px; */
+  display:inline-block;
+  position:absolute;
+  font-size:12px;
+  bottom:-30px;
+  left:8px;
+  /* transform:translateX(-50%); */
+}
+header div.progress_bar>div.progess_line{
+  /* border:1px solid red; */
+  width:300px;
+  height:3px;
+  position:absolute;
+  top:40px;
+}

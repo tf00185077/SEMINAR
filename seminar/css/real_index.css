@@ -1,0 +1,524 @@
+header{
+  width:1200px;
+  height:800px;
+  margin:0 auto;
+  /* border:1px solid red; */
+  background-image: url("../../pic/index_front_bg.jpg");
+  background-position:center;
+  background-size:cover;
+  text-align:center;
+  position:relative;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  flex-wrap:wrap;
+}
+header::before{
+  content:"";
+  position:absolute;
+  right:0;
+  top:0;
+}
+header div.nav{
+  /* border:1px solid red; */
+  width:300px;
+  height:800px;
+  background:rgba(255,255,255,.6);
+  position:absolute;
+  left:0;
+  top:0;
+  transform-style: preserve-3d;
+  perspective: 100px;
+  transform: rotateY(-90deg);
+  transition: .5s;
+  box-shadow: 50px 0 10px -10px rgb(0 0 0 / 20%);
+  border-radius: 0 10px 10px 0px;
+}
+header input[type="checkbox"]:checked + div.nav{
+  transform: rotateY(0deg);
+}
+header input[type="checkbox"]{
+  appearance:none;
+  background-image: url("../../pic/pie.svg");
+  width:50px;
+  height:50px;
+  position:absolute;
+  left: 40px;
+  top: 40px;
+  border-radius: 50%;
+  box-shadow: 0 0 20px black;
+  text-align: center;
+  z-index: 20;
+}
+header div.nav ul{
+  display:flex;
+  list-style: none;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: row;
+  flex-wrap: wrap;
+  /* border: 1px solid red; */
+  width: 20px;
+  position: absolute;
+  top: 30%;
+  font-size: 3rem;
+  gap: 20px;
+}
+header div.nav ul li{
+  position: relative;
+  z-index:100;
+  text-decoration: none;
+  transition:.5s;
+  background: linear-gradient(90deg,red,blue);
+  background-size: 0% 3px;
+  background-repeat: no-repeat;
+  background-position: left bottom;
+}
+header div.nav ul>li:hover{
+  background-size: 100% 3px;
+}
+header img.nav_icon{
+  width:50px;
+  height:50px;
+  position:absolute;
+  left: 40px;
+  top: 40px;
+  border-radius: 50%;
+  box-shadow: 0 0 10px black;
+  text-align: center;
+  z-index: 20;
+}
+header img.nav_icon:hover{
+  cursor:pointer;
+}
+header div.title{
+  margin-top:100px;
+  width:100%;
+  height:400px;
+  font-size:4rem;
+}
+header div.title>h1:nth-child(1){
+  position: absolute;
+  right: 458px;
+  display: inline-block;
+  top: 150px;
+}
+header div.title>h1:nth-child(2){
+  position: absolute;
+  bottom: 191px;
+  left: 475px;
+  display: inline-block;
+}
+
+div.index_down_button{
+  width:150px;
+  height:150px;
+  transition: 1s;
+  position:absolute;
+  bottom:0px;
+  left:50%;
+  transform: translate(-50% ,0%);
+}
+div.index_down_button:hover{
+  width:180px;
+  height:180px;
+  cursor: pointer;
+  animation: arrow .8s linear 0s infinite alternate;
+}
+@keyframes arrow {
+  0%{
+    width:150px;
+    height:150px;
+    transform: translate(-50% ,0%);
+  }
+  100%{
+    height:180px;
+    height:180px;
+    transform: translate(-50% ,10%);
+  }
+}
+div.advertise div.up_banner,
+div.advertise div.down_banner{
+  margin:0 auto;
+  /* border:1px solid red; */
+  background-image: url("../../pic/ribbon3.jpg");
+  width:1200px;
+  height:50px;
+  background-position: center;
+  background-size: contain;
+  background-repeat: repeat-x;
+}
+div.advertise div.pic{
+  margin:0 auto;
+  /* border:1px solid black; */
+  width:1200px;
+  height:200px;
+  overflow: hidden;
+}
+div.advertise div.pic ul{
+  margin:0;
+  padding:0;
+  display:flex;
+  gap:2px;
+  list-style: none;
+}
+div.advertise div.pic ul li{
+  margin:0;
+  /* border:1px solid red; */
+  width:200px;
+  height:200px;
+}
+div.advertise div.pic ul li img{
+  width:100%;
+  height:100%;
+}
+main{
+  /* border:1px solid blue; */
+  margin:0 auto;
+  width:1200px;
+}
+main div.introduce{
+  height:400px;
+  background-image: url("../../pic/introduce_bg.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position:relative;
+}
+main div.introduce div.introduce_text{
+  /* border:1px solid red; */
+  position:relative;
+  height:350px;
+  width:330px;
+  top:50%;
+  left:100px;
+  transform:translateY(-50%);
+  padding:30px 0 10px 50px;
+  border-radius: 10px;
+  color:white;
+  font-size:1rem;
+  box-shadow: 0 0 10px 5px rgba(0,0,0,.3);
+  text-align:left;
+
+}
+main div.introduce div.introduce_text h1{
+  position:relative;
+  z-index:-2;
+}
+main div.plan_bg{
+  height:800px;
+  background-image: url(../../pic/plan_bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position:relative;
+}
+main div.plan_bg div.plan2,
+main div.plan_bg div.plan1{
+  /* border:1px solid red; */
+  position:absolute;
+  text-align: center;
+  width:200px;
+  height:300px;
+  transform: rotate(-13deg);
+  border-radius: 10px;
+  box-shadow: 0 0 10px 10px rgb(0 ,0, 0, .2);
+  transition: .5s;
+  display:flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: center;
+  z-index: 100;
+  background: white;
+}
+
+main div.plan_bg div.plan1{
+  left: 35%;
+  top: 40%;
+}
+main div.plan_bg div.shadow{
+  position:absolute;
+  width:200px;
+  height:300px;
+  border-radius: 10px;
+  transition: .5s;
+  left: 35%;
+  top: 40%;
+  transform: rotate(-13deg);
+}
+
+main div.plan_bg div.shadow:nth-child(2){
+  background: rgba(0,0,0,.1);
+}
+main div.plan_bg div.shadow:nth-child(4){
+  background: rgba(0,0,0,.2);
+}
+main div.plan_bg div.plan1:hover{
+  transform: rotate(-13deg) translate(10px,-10px);
+}
+main div.plan_bg div.plan1:hover + div.shadow:nth-child(2){
+  transform: rotate(-13deg) translate(-10px,10px);
+}
+main div.plan_bg div.plan1:hover + div.shadow:nth-child(4){
+  transform: rotate(-13deg) translate(-30px,30px)
+}
+main div.plan_bg div.plan2{
+  left: 63%;
+  top: 30%;
+}
+main div.plan_bg div.shadow2{
+  position:absolute;
+  width:200px;
+  height:300px;
+  border-radius: 10px;
+  transition: .5s;
+  left: 63%;
+  top: 30%;
+  transform: rotate(-13deg);
+}
+main div.plan_bg div.shadow2:nth-child(6){
+  background: rgba(0,0,0,.1);
+}
+main div.plan_bg div.shadow2:nth-child(8){
+  background: rgba(0,0,0,.2);
+}
+main div.plan_bg div.plan2:hover{
+  transform: rotate(-13deg) translate(10px,-10px);
+}
+main div.plan_bg div.plan2:hover + div.shadow2:nth-child(6){
+  transform: rotate(-13deg) translate(-10px,10px);
+}
+main div.plan_bg div.plan2:hover + div.shadow2:nth-child(8){
+  transform: rotate(-13deg) translate(-30px,30px)
+}
+main div.plan_bg div.plan1 h1,
+main div.plan_bg div.plan2 h1{
+  margin:0;
+  transition: .5s;
+  margin-bottom: 3px;
+  width:150px;
+}
+main div.plan_bg div.plan1:hover  h1,
+main div.plan_bg div.plan2:hover  h1{
+  transform: scale(1.5);
+}
+main div.plan_bg div.plan1 button,
+main div.plan_bg div.plan2 button{
+  border: 1px solid black;
+  width: 100px;
+  margin-top: 12px;
+  height: 27px;
+  border-radius: 5px;
+  background-color: transparent;
+  box-shadow: 0 20px 5px -5px rgb(0 0 0 / 10%);
+  outline: none;
+  transform-style: preserve-3d;
+  perspective: 50px;
+  transform: rotateY(0deg);
+  transition: .5s;
+}
+
+main div.plan_bg div.plan1 button:hover,
+main div.plan_bg div.plan2 button:hover{
+  transform:rotateY(50deg);
+}
+main div.contact_bg{
+  height:600px;
+  background-image: url(../../pic/contact_bg.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position:relative;
+}
+main div.contact_bg h1{
+  /* border:1px solid red; */
+  position: absolute;
+  margin: 0px;
+  padding: 0;
+  font-size: 6rem;
+  bottom: 50px;
+  left: 550px;
+}
+main div.contact_bg div.contact_icon{
+  /* border:1px solid red; */
+  width:400px;
+  height:400px;
+  position:absolute;
+  top:20px;
+  left:600px;
+  border-radius:50%;
+  /* background:radial-gradient(circle at 40% 20%, #5cabff, #000); */
+}
+main div.contact_bg div.contact_icon div.contact_icon_ball{
+  /* border:1px solid red; */
+  width:400px;
+  height:400px;
+  position:absolute;
+  top:0px;
+  left:0;
+  border-radius:50%;
+  background-image:url("../../pic/worldmap.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index:1;
+  box-shadow:-20px -20px 50px black inset,0px 0px 20px rgba(0,0,0,.5);
+  animation: world 30s linear infinite alternate;
+}
+@keyframes world {
+  100%{
+    background-position: 100%;
+  }
+}
+main div.contact_bg div.contact_icon div.fb_icon{
+  border-radius: 50%;
+  border:2px solid black;
+  display:inline-block;
+  width:50px;
+  height:50px;
+  position:absolute;
+  top:0;
+  left:0;
+  animation: roll 3s ease-in-out infinite;
+}
+main div.contact_bg div.contact_icon div.line_icon{
+  border-radius: 50%;
+  border:2px solid black;
+  display:inline-block;
+  width:50px;
+  height:50px;
+  position:absolute;
+  top:0;
+  right:0;
+  animation: roll2 5s  ease-in-out infinite;
+}
+main div.contact_bg div.contact_icon div.line_icon img{
+  display: inline-block;
+  width:100%;
+  height:100%;
+}
+main div.contact_bg div.contact_icon div.instagram_icon{
+  border-radius: 15px;
+  border:2px solid black;
+  display:inline-block;
+  width:50px;
+  height:50px;
+  position:absolute;
+  top:45%;
+  right:-150px;
+  animation: roll3 4s  ease-in-out infinite;
+}
+main div.contact_bg div.contact_icon div.instagram_icon img{
+  display: inline-block;
+  width:100%;
+  height:100%;
+}
+
+@keyframes roll {
+  0%{
+    top:0;
+    left:0;
+    z-index:2
+  }
+
+  25%{
+    transform: scale(2);
+  }
+  50%{
+    top:100%;
+    left:100%;
+    transform: scale(1);
+    z-index:2;
+  }
+  51%{
+    z-index:0;
+  }
+  75%{
+    transform: scale(.2);
+  }
+  100%{
+    top:0%;
+    left:0%;
+  }
+}
+@keyframes roll2{
+  0%{
+    top:0;
+    right:0;
+    z-index: 2;
+  }
+  25%{
+    transform: scale(2);
+  }
+  50%{
+    top:100%;
+    right:100%;
+    transform: scale(1);
+    z-index: 2;
+  }
+  51%{
+    z-index:0;
+  }
+  75%{
+    transform:scale(.3);
+  }
+  100%{
+    top:0%;
+    right:0%;
+  }
+}
+@keyframes roll3{
+  0%{
+    top:45%;
+    right:-150px;
+    z-index:2;
+  }
+  25%{
+    transform: scale(2);
+  }
+  50%{
+    top:45%;
+    right:500px;
+    transform: scale(1);
+    z-index:2;
+  }
+  51%{
+    z-index:0;
+  }
+  75%{
+    transform:scale(.01);
+  }
+  100%{
+    top:45%;
+    right:-150px;
+  }
+}
+footer{
+  margin:0 auto;
+  width:1200px;
+  height:330px;
+  background-image:url("../../pic/bannerpic5.jpg");
+  background-size: cover;
+  background-position: center;
+}
+footer div.information{
+  /* border:1px solid red; */
+  display:flex;
+  gap:100px;
+}
+footer div.information ul a li{
+  list-style:none;
+}
+footer div.information ul a{
+  text-decoration: none;
+}
+footer div.information ul a li{
+  list-style:none;
+  font-size: 2rem;
+  color:white;
+  margin-bottom:20px;
+}
+footer p{
+  margin:0 20px;
+  color:white;
+  font-size: 1rem;
+}

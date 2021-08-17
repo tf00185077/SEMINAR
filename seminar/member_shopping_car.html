@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="zh-HANT" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>會員購物車</title>
+  <link rel="stylesheet" href="/css/common/nav.css">
+  <link rel="stylesheet" href="/css/common/footer.css">
+  <style media="screen">
+    *{
+      box-sizing:border-box;
+      text-decoration:none;
+    }
+    nav{
+      z-index:2;
+    }
+    main{
+      margin:0 auto;
+      margin-top:50px;
+      width:1200px;
+      display:grid;
+      grid-template-columns:1fr 5fr;
+      grid-template-rows:300px;
+      /* border:1px solid black; */
+      height:470px;
+      position:relative;
+    }
+
+
+    main aside{
+      /* z-index:100; */
+      display:flex;
+      flex-wrap:wrap;
+      justify-content:flex-start;
+      align-items:center;
+      position:relative;
+    }
+    main aside a{
+      display:inline-block;
+      margin:0;
+      padding:0;
+      border-bottom:1px solid #ffffaa;
+      width:90px;
+      margin-left:20px;
+      color:black;
+    }
+    main aside div.member_pic{
+      width:100px;
+      height:100px;
+      background:#ffffaa;
+      border-radius:50%;
+      overflow:hidden;
+    }
+    main aside div.member_pic::after{
+      content:"";
+      position:absolute;
+      height:300px;
+      border:1px solid #ffffaa;
+      left:20px;
+    }
+    main>div.member_shopping_car{
+      /* border:1px solid red; */
+      display:flex;
+      flex-direction:column;
+      position:relative;
+      gap:15px;
+      /* height:500px; */
+    }
+    main>div.member_shopping_car>div.member_shopping_car_totalprice{
+      /* border:1px solid red; */
+      position:absolute;
+      width:100px;
+      height:150px;
+      background:#ffffaa;
+      border-radius:10px;
+      right:0;
+      top:50%;
+      text-align:center;
+    }
+    div.member_shopping_car_totalprice input{
+      outline:none;
+      border-radius:5px;
+      background:#FDA2A2;
+      border:8px solid #FDA2A2;
+    }
+    main>div.member_shopping_car>div.shopping_car_goods{
+      margin:0 auto;
+      /* border:1px solid black; */
+      width:600px;
+      height:100px;
+      position:relative;
+      background:#ffffaa;
+      border-radius:5px;
+    }
+    main>div.member_shopping_car>div.shopping_car_goods>div.shopping_car_goods_pic{
+      /* border:1px solid blue; */
+      width:100px;
+      height:100px;
+    }
+    main>div.member_shopping_car>div.shopping_car_goods img{
+      margin:0 auto;
+      display:block;
+      width:100%;
+      height:auto;
+      padding:5px;
+    }
+    main>div.member_shopping_car>div.shopping_car_goods h2{
+      /* border:1px solid red; */
+      margin:5px;
+      position:absolute;
+      top:0;
+      left:50%;
+      transform:translateX(-50%);
+    }
+    div.shopping_car_price{
+      padding:0 5px;
+      /* border:1px solid red; */
+      width:300px;
+      display:flex;
+      position:absolute;
+      bottom:0;
+      left:50%;
+      transform:translateX(-50%);
+      gap:60px;
+      align-items:center;
+      font-size:30px;
+    }
+    div.shopping_car_price>p{
+      margin:0 auto 5;
+    }
+    div.page ul{
+      /* border:1px solid red; */
+      margin:0 auto;
+      /* padding:5px; */
+      width:300px;
+
+      list-style:none;
+      display:flex;
+      gap:15px;
+      text-align:center;
+    }
+
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="">
+      <a href="./index.html">
+        <img src="./pic/onlinekitchen_text.png" alt="">
+      </a>
+      <div>
+        <input type="text" name="" value="" placeholder="請輸入欲查詢的名稱">
+        <img src="./pic/searchicon.png" alt="">
+      </div>
+      <ul>
+        <li><a href="./goods.html">隨便看看</a></li>
+        <li><a href="./member_assign.html">註冊/登入</a></li>
+        <li><a href="./member_shopping_car.html">購物車</a></li>
+        <li><a href="./member_file.html">會員紀錄</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <aside class="member_choose">
+      <div class="member_pic">
+        <img src="" alt="">
+      </div>
+      <a href="./member_file.html">會員資料</a>
+      <a href="./member_shopping_car.html">我的購物車</a>
+      <a href="./member_history.html">歷史紀錄</a>
+    </aside>
+    <div class="member_shopping_car">
+      <div class="member_shopping_car_totalprice">
+        <h3>商品總計</h3>
+        <h3>$5400</h3>
+        <input type="submit" name="" value="結帳">
+      </div>
+      <div class="shopping_car_goods">
+        <div class="shopping_car_goods_pic">
+          <img src="./pic/cream.png" alt="">
+        </div>
+        <h2>Lorem ipsum dolor</h2>
+        <div class="shopping_car_price">
+          <p>$350</p>
+          <input type="number" maxlength="2" style="width:40px;height:20px" maxlength="2">
+          <p>1350</p>
+        </div>
+      </div>
+      <div class="shopping_car_goods">
+        <div class="shopping_car_goods_pic">
+          <img src="./pic/cream.png" alt="">
+        </div>
+        <h2>Lorem ipsum dolor</h2>
+        <div class="shopping_car_price">
+          <p>$350</p>
+          <input type="number" maxlength="2" style="width:40px;height:20px" maxlength="2">
+          <p>1350</p>
+        </div>
+      </div>
+      <div class="shopping_car_goods">
+        <div class="shopping_car_goods_pic">
+          <img src="./pic/cream.png" alt="">
+        </div>
+        <h2>Lorem ipsum dolor</h2>
+        <div class="shopping_car_price">
+          <p>$350</p>
+          <input type="number" maxlength="2" style="width:40px;height:20px" maxlength="2">
+          <p>1350</p>
+        </div>
+      </div>
+      <div class="shopping_car_goods">
+        <div class="shopping_car_goods_pic">
+          <img src="./pic/cream.png" alt="">
+        </div>
+        <h2>Lorem ipsum dolor</h2>
+        <div class="shopping_car_price">
+          <p>$350</p>
+          <input type="number" maxlength="2" style="width:40px;height:20px" maxlength="2">
+          <p>1350</p>
+        </div>
+      </div>
+    </div>
+  </main>
+  <div class="page">
+    <ul>
+      <a href="#"><li><</li></a>
+      <a href="#"><li>1</li></a>
+      <a href="#"><li>2</li></a>
+      <a href="#"><li>3</li></a>
+      <a href="#"><li>4</li></a>
+      <a href="#"><li>5</li></a>
+      <a href="#"><li>6</li></a>
+      <a href="#"><li>7</li></a>
+      <a href="#"><li>8</li></a>
+      <a href="#"><li>9</li></a>
+      <a href="#"><li>></li></a>
+      <var></var>
+    </ul>
+  </div>
+  <footer>
+    <div class="copyriht">
+      <p>&copy 僅供緯育tibeme教學之用</p>
+    </div>
+  </footer>
+</body>
+</html>
