@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-HANT" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <title>會員歷史紀錄</title>
+  <link rel="stylesheet" href="/css/common/nav.css">
+  <link rel="stylesheet" href="/css/common/footer.css">
+  <style media="screen">
+  *{
+    box-sizing:border-box;
+    text-decoration:none;
+  }
+  main{
+    margin:0 auto;
+    margin-top:50px;
+    width:1200px;
+    display:grid;
+    grid-template-columns:1fr 5fr;
+    grid-template-rows:300px;
+    /* border:1px solid red; */
+    height:400px;
+  }
+  main aside{
+    z-index:100;
+    display:flex;
+    flex-wrap:wrap;
+    justify-content:flex-start;
+    align-items:center;
+    position:relative;
+  }
+  main aside a{
+    display:inline-block;
+    margin:0;
+    padding:0;
+    border-bottom:1px solid #ffffaa;
+    width:90px;
+    margin-left:20px;
+    color:black;
+  }
+  main aside div.member_pic{
+    width:100px;
+    height:100px;
+    background:#ffffaa;
+    border-radius:50%;
+    overflow:hidden;
+  }
+  main aside div.member_pic::after{
+    content:"";
+    position:absolute;
+    height:300px;
+    border:1px solid #ffffaa;
+    left:20px;
+  }
+  main div.member_history{
+    /* border:1px solid yellow; */
+    height:400px;
+  }
+  main div.member_history div.member_history_selector{
+    /* border:1px solid red; */
+    display:flex;
+    justify-content: center;
+    gap:100px;
+    margin-bottom:20px;
+  }
+
+  main div.member_history div.member_history_detail{
+    /* border:1px solid red; */
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  main div.member_history div.member_history_detail table{
+    width:800px;
+    height:300px;
+  }
+  main div.member_history div.member_history_detail table,
+  main div.member_history div.member_history_detail table tr,
+  main div.member_history div.member_history_detail table tr td{
+    border:1px solid black;
+    border-collapse: collapse;
+    text-align: center;
+  }
+  div.page_selector{
+    /* border:1px solid red; */
+    display:flex;
+    /* flex-direction: column; */
+    justify-content: center;
+    align-items: center;
+  }
+  div.page_selector ul.page{
+    list-style: none;
+  }
+  div.page_selector ul.page li{
+    padding:3px;
+    display:inline-block;
+    margin:0 5px;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="">
+      <a href="./index.html">
+        <img src="./pic/onlinekitchen_text.png" alt="">
+      </a>
+      <div>
+        <input type="text" name="" value="" placeholder="請輸入欲查詢的名稱">
+        <img src="./pic/searchicon.png" alt="">
+      </div>
+      <ul>
+        <li><a href="./goods.html">隨便看看</a></li>
+        <li><a href="./member_assign.html">註冊/登入</a></li>
+        <li><a href="./member_shopping_car.html">購物車</a></li>
+        <li><a href="./member_file.html">會員紀錄</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main>
+    <aside class="member_choose">
+      <div class="member_pic">
+        <img src="" alt="">
+      </div>
+      <a href="./member_file.html">會員資料</a>
+      <a href="./member_shopping_car.html">我的購物車</a>
+      <a href="./member_history.html">歷史紀錄</a>
+    </aside>
+    <div class="member_history">
+      <div class="member_history_selector">
+        <select class="" name="">
+          <option>一月</option>
+          <option>二月</option>
+          <option>三月</option>
+          <option>四月</option>
+          <option>五月</option>
+          <option>六月</option>
+          <option>七月</option>
+          <option>八月</option>
+          <option>九月</option>
+          <option>十月</option>
+          <option>十一月</option>
+          <option>十二月</option>
+        </select>
+        <input type="text" name="" value="" placeholder="搜尋商品名稱">
+        <input type="text" name="" value="" placeholder="搜尋購買時間">
+      </div>
+
+      <div class="member_history_detail">
+        <table>
+          <tr>
+            <td>商品名稱</td>
+            <td>單價</td>
+            <td>數量</td>
+            <td>總價</td>
+            <td>購買時間</td>
+          </tr>
+          <tr>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+            <td>1</td>
+          </tr>
+          <tr style="background:rgba(0,0,0,.2)">
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+            <td>2</td>
+          </tr>
+          <tr>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+            <td>3</td>
+          </tr>
+          <tr style="background:rgba(0,0,0,.2)">
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+            <td>4</td>
+          </tr>
+          <tr>
+            <td>5</td>
+            <td>5</td>
+            <td>5</td>
+            <td>5</td>
+            <td>5</td>
+          </tr>
+
+        </table>
+      </div>
+    </div>
+  </main>
+  <div class="page_selector">
+    <ul class="page">
+      <li><a href="#"><</a></li>
+      <li><a href="#">1</a></li>
+      <li><a href="#">2</a></li>
+      <li><a href="#">3</a></li>
+      <li><a href="#">4</a></li>
+      <li><a href="#">5</a></li>
+      <li><a href="#">6</a></li>
+      <li><a href="#">7</a></li>
+      <li><a href="#">8</a></li>
+      <li><a href="#">9</a></li>
+      <li><a href="#">></a></li>
+    </ul>
+  </div>
+  <footer>
+    <div class="copyriht">
+      <p>&copy 僅供緯育tibeme教學之用</p>
+    </div>
+  </footer>
+</body>
+</html>

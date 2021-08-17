@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="zh-HANT" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>會員資料</title>
+    <link rel="stylesheet" href="/css/common/nav.css">
+    <link rel="stylesheet" href="/css/common/footer.css">
+    <style media="screen">
+      *{
+        box-sizing:border-box;
+        text-decoration:none;
+      }
+      main{
+        margin:0 auto;
+        margin-top:50px;
+        width:1200px;
+        height:400px;
+        display:grid;
+        grid-template-columns:1fr 5fr;
+        grid-template-rows:300px;
+      }
+      main aside{
+        z-index:100;
+        display:flex;
+        flex-wrap:wrap;
+        justify-content:flex-start;
+        align-items:center;
+        position:relative;
+      }
+      main aside a{
+        display:inline-block;
+        margin:0;
+        padding:0;
+        border-bottom:1px solid #ffffaa;
+        width:90px;
+        margin-left:20px;
+        color:black;
+      }
+      main aside div.member_pic{
+        width:100px;
+        height:100px;
+        background:#ffffaa;
+        border-radius:50%;
+        overflow:hidden;
+      }
+      main aside div.member_pic::after{
+        content:"";
+        position:absolute;
+        height:300px;
+        border:1px solid #ffffaa;
+        left:20px;
+      }
+      div.member_file{
+        /* border:1px solid red; */
+        padding:5px;
+        height:350px;
+        border-radius:10px;
+        background:#ffffaa;
+        display:grid;
+        grid-template-columns:1fr 1fr;
+        /* grid-template-rows: */
+        position:relative;
+      }
+      p.birthday::after{
+        content:"";
+        background-color:#000;
+        width:10px;
+        height:10px;
+        position:absolute;
+        border-radius:50%;
+        top:20%;
+        left:40%;
+      }
+      p.email::after{
+        content:"";
+        background-color:#000;
+        width:10px;
+        height:10px;
+        position:absolute;
+        border-radius:50%;
+        top:55%;
+        left:40%;
+      }
+      p.adress::after{
+        content:"";
+        background-color:#000;
+        width:10px;
+        height:10px;
+        position:absolute;
+        border-radius:50%;
+        top:92%;
+        left:40%;
+      }
+      p.secret_number::after{
+        content:"";
+        background-color:#000;
+        width:10px;
+        height:10px;
+        position:absolute;
+        border-radius:50%;
+        bottom:15px;
+        right:10px;
+      }
+
+    </style>
+  </head>
+  <body>
+    <header>
+      <nav class="">
+        <a href="./index.html">
+          <img src="./pic/onlinekitchen_text.png" alt="">
+        </a>
+        <div>
+          <input type="text" name="" value="" placeholder="請輸入欲查詢的名稱">
+          <img src="./pic/searchicon.png" alt="">
+        </div>
+        <ul>
+          <li><a href="./goods.html">隨便看看</a></li>
+          <li><a href="./member_assign.html">註冊/登入</a></li>
+          <li><a href="./member_shopping_car.html">購物車</a></li>
+          <li><a href="./member_history.html">會員紀錄</a></li>
+        </ul>
+    </header>
+    <main>
+      <aside class="member_choose">
+        <div class="member_pic">
+          <img src="" alt="">
+        </div>
+        <a href="./member_file.html">會員資料</a>
+        <a href="./member_shopping_car.html">我的購物車</a>
+        <a href="./member_history.html">歷史紀錄</a>
+      </aside>
+      <div class="member_file">
+        <div class="left">
+          <div>
+            <p>姓名:陳庭揚</p>
+          </div>
+          <div>
+            <p class="birthday">生日:1995/04/06</p>
+          </div>
+          <hr>
+          <div>
+            <p>帳號:AAAAAAA</p>
+          </div>
+          <div>
+            <p>密碼********</p>
+          </div>
+          <div>
+            <p class="email">信箱:****@yahoo.com.tw</p>
+          </div>
+          <hr>
+          <div>
+            <p>連絡電話0912345678</p>
+          </div>
+          <div>
+            <p>地址</p>
+            <p class="adress">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed</p>
+          </div>
+        </div>
+        <div class="right">
+          <div>
+          <p>付款資訊</p>
+          <label for=""><input type="radio" name="credit" value="">VISA</label>
+          <label for=""><input type="radio" name="credit" value="">Mastrecard</label>
+          </div>
+          <div>
+            <p>信用卡卡號</p>
+            <input type="text" name="" value="" style="width:40px" maxlength="4">
+            <input type="text" name="" value="" style="width:40px" maxlength="4">
+            <input type="text" name="" value="" style="width:40px" maxlength="4">
+            <input type="text" name="" value="" style="width:40px" maxlength="4">
+          </div>
+          <div>
+            <p class="secret_number">安全碼</p>
+            <input type="text" name="" value="" style="width:30px" maxlength="3">
+          </div>
+          <div>
+            <p>帳單地址</p>
+            <p class="tax_adress">Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed</p>
+          </div>
+        </div>
+      </div>
+    </main>
+    <footer>
+      <div class="copyriht">
+        <p>&copy 僅供緯育tibeme教學之用</p>
+      </div>
+    </footer>
+  </body>
+</html>
