@@ -3,7 +3,7 @@ header{
   height:800px;
   margin:0 auto;
   /* border:1px solid red; */
-  background-image: url("../../pic/index_front_bg.jpg");
+  background-image: url("../pic/index_front_bg.jpg");
   background-position:center;
   background-size:cover;
   text-align:center;
@@ -39,7 +39,7 @@ header input[type="checkbox"]:checked + div.nav{
 }
 header input[type="checkbox"]{
   appearance:none;
-  background-image: url("../../pic/pie.svg");
+  background-image: url("../pic/pie.svg");
   width:50px;
   height:50px;
   position:absolute;
@@ -141,7 +141,7 @@ div.advertise div.up_banner,
 div.advertise div.down_banner{
   margin:0 auto;
   /* border:1px solid red; */
-  background-image: url("../../pic/ribbon3.jpg");
+  background-image: url("../pic/ribbon3.jpg");
   width:1200px;
   height:50px;
   background-position: center;
@@ -179,7 +179,7 @@ main{
 }
 main div.introduce{
   height:400px;
-  background-image: url("../../pic/introduce_bg.jpg");
+  background-image: url("../pic/introduce_bg.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
@@ -207,7 +207,7 @@ main div.introduce div.introduce_text h1{
 }
 main div.plan_bg{
   height:800px;
-  background-image: url(../../pic/plan_bg.jpg);
+  background-image: url("../pic/plan_bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -340,7 +340,7 @@ main div.plan_bg div.plan2 button:hover{
 }
 main div.contact_bg{
   height:600px;
-  background-image: url(../../pic/contact_bg.jpg);
+  background-image: url("../pic/contact_bg.jpg");
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
@@ -373,7 +373,7 @@ main div.contact_bg div.contact_icon div.contact_icon_ball{
   top:0px;
   left:0;
   border-radius:50%;
-  background-image:url("../../pic/worldmap.jpg");
+  background-image:url("../pic/worldmap.jpg");
   background-size: cover;
   background-repeat: no-repeat;
   z-index:1;
@@ -521,7 +521,7 @@ footer{
   margin:0 auto;
   width:1200px;
   height:330px;
-  background-image:url("../../pic/bannerpic5.jpg");
+  background-image:url("../pic/bannerpic5.jpg");
   background-size: cover;
   background-position: center;
   /* border:1px solid red; */
