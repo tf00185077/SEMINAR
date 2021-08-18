@@ -101,7 +101,7 @@ header div.title>h1:nth-child(1){
   position: absolute;
   right: 458px;
   display: inline-block;
-  top: 150px;
+  top: 130px;
 }
 header div.title>h1:nth-child(2){
   position: absolute;
@@ -236,7 +236,9 @@ main div.plan_bg div.plan1{
   left: 35%;
   top: 40%;
 }
-main div.plan_bg div.shadow{
+main div.plan_bg div.shadow1-1,
+main div.plan_bg div.shadow1-2,
+main div.plan_bg div.shadow1-3{
   position:absolute;
   width:200px;
   height:300px;
@@ -247,26 +249,34 @@ main div.plan_bg div.shadow{
   transform: rotate(-13deg);
 }
 
-main div.plan_bg div.shadow:nth-child(2){
+main div.plan_bg div.shadow1-1{
   background: rgba(0,0,0,.1);
 }
-main div.plan_bg div.shadow:nth-child(4){
+main div.plan_bg div.shadow1-2{
   background: rgba(0,0,0,.2);
+}
+main div.plan_bg div.shadow1-3{
+  background: rgba(0,0,0,.3);
 }
 main div.plan_bg div.plan1:hover{
   transform: rotate(-13deg) translate(10px,-10px);
 }
-main div.plan_bg div.plan1:hover + div.shadow:nth-child(2){
-  transform: rotate(-13deg) translate(-10px,10px);
+main div.plan_bg div.plan1:hover ~ div.shadow1-1{
+  transform: rotate(-13deg) translate(0px,0px);
 }
-main div.plan_bg div.plan1:hover + div.shadow:nth-child(4){
-  transform: rotate(-13deg) translate(-30px,30px)
+main div.plan_bg div.plan1:hover ~ div.shadow1-2{
+  transform: rotate(-13deg) translate(-10px,10px)
+}
+main div.plan_bg div.plan1:hover ~ div.shadow1-3{
+  transform: rotate(-13deg) translate(-20px,20px)
 }
 main div.plan_bg div.plan2{
   left: 63%;
   top: 30%;
 }
-main div.plan_bg div.shadow2{
+main div.plan_bg div.shadow2-1,
+main div.plan_bg div.shadow2-2,
+main div.plan_bg div.shadow2-3{
   position:absolute;
   width:200px;
   height:300px;
@@ -276,20 +286,26 @@ main div.plan_bg div.shadow2{
   top: 30%;
   transform: rotate(-13deg);
 }
-main div.plan_bg div.shadow2:nth-child(6){
+main div.plan_bg div.shadow2-1{
   background: rgba(0,0,0,.1);
 }
-main div.plan_bg div.shadow2:nth-child(8){
+main div.plan_bg div.shadow2-2{
   background: rgba(0,0,0,.2);
+}
+main div.plan_bg div.shadow2-3{
+  background: rgba(0,0,0,.3);
 }
 main div.plan_bg div.plan2:hover{
   transform: rotate(-13deg) translate(10px,-10px);
 }
-main div.plan_bg div.plan2:hover + div.shadow2:nth-child(6){
+main div.plan_bg div.plan2:hover ~ div.shadow2-1{
+  transform: rotate(-13deg) translate(0px,0px);
+}
+main div.plan_bg div.plan2:hover ~ div.shadow2-2{
   transform: rotate(-13deg) translate(-10px,10px);
 }
-main div.plan_bg div.plan2:hover + div.shadow2:nth-child(8){
-  transform: rotate(-13deg) translate(-30px,30px)
+main div.plan_bg div.plan2:hover ~ div.shadow2-3{
+  transform: rotate(-13deg) translate(-20px,20px)
 }
 main div.plan_bg div.plan1 h1,
 main div.plan_bg div.plan2 h1{
@@ -378,7 +394,10 @@ main div.contact_bg div.contact_icon div.fb_icon{
   position:absolute;
   top:0;
   left:0;
-  animation: roll 3s ease-in-out infinite;
+  animation: roll 3s ease-in-out infinite forwards;
+}
+main div.contact_bg div.contact_icon div.fb_icon:hover{
+  animation: roll 3s ease-in-out infinite forwards paused;
 }
 main div.contact_bg div.contact_icon div.line_icon{
   border-radius: 50%;
@@ -390,6 +409,9 @@ main div.contact_bg div.contact_icon div.line_icon{
   top:0;
   right:0;
   animation: roll2 5s  ease-in-out infinite;
+}
+main div.contact_bg div.contact_icon div.line_icon:hover{
+  animation: roll2 5s  ease-in-out infinite paused;
 }
 main div.contact_bg div.contact_icon div.line_icon img{
   display: inline-block;
@@ -406,6 +428,9 @@ main div.contact_bg div.contact_icon div.instagram_icon{
   top:45%;
   right:-150px;
   animation: roll3 4s  ease-in-out infinite;
+}
+main div.contact_bg div.contact_icon div.instagram_icon:hover{
+  animation: roll3 4s  ease-in-out infinite paused;
 }
 main div.contact_bg div.contact_icon div.instagram_icon img{
   display: inline-block;
@@ -499,6 +524,7 @@ footer{
   background-image:url("../../pic/bannerpic5.jpg");
   background-size: cover;
   background-position: center;
+  /* border:1px solid red; */
 }
 footer div.information{
   /* border:1px solid red; */
@@ -508,16 +534,18 @@ footer div.information{
 footer div.information ul a li{
   list-style:none;
 }
-footer div.information ul a{
-  text-decoration: none;
-}
-footer div.information ul a li{
-  list-style:none;
+
+footer div.information ul a li.title{
   font-size: 2rem;
   color:white;
-  margin-bottom:20px;
+  list-style: none;
+  /* margin-bottom:20px; */
+}
+footer div.information ul a li.content{
+  color:white;
 }
 footer p{
+  display:inline-block;
   margin:0 20px;
   color:white;
   font-size: 1rem;

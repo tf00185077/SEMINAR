@@ -3,12 +3,16 @@
 <head>
   <meta charset="utf-8">
   <title>會員歷史紀錄</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/css/common/nav.css">
   <link rel="stylesheet" href="/css/common/footer.css">
   <style media="screen">
   *{
     box-sizing:border-box;
     text-decoration:none;
+    font-family: 'Noto Sans TC', sans-serif;
   }
   main{
     margin:0 auto;
@@ -21,7 +25,7 @@
     height:400px;
   }
   main aside{
-    z-index:100;
+    z-index:90;
     display:flex;
     flex-wrap:wrap;
     justify-content:flex-start;
@@ -40,17 +44,17 @@
   main aside div.member_pic{
     width:100px;
     height:100px;
-    background:#ffffaa;
     border-radius:50%;
     overflow:hidden;
+    background:url("./pic/bighead.jpg");;
+    border-radius:50%;
+    overflow:hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:contain;
+    position:relative;
   }
-  main aside div.member_pic::after{
-    content:"";
-    position:absolute;
-    height:300px;
-    border:1px solid #ffffaa;
-    left:20px;
-  }
+
   main div.member_history{
     /* border:1px solid yellow; */
     height:400px;
@@ -154,39 +158,39 @@
             <td>購買時間</td>
           </tr>
           <tr>
+            <td>抹茶冰淇淋</td>
+            <td>$120</td>
             <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
-            <td>1</td>
+            <td>$120</td>
+            <td>2021/06/04</td>
           </tr>
           <tr style="background:rgba(0,0,0,.2)">
+            <td>白葡萄塔</td>
+            <td>$150</td>
             <td>2</td>
-            <td>2</td>
-            <td>2</td>
-            <td>2</td>
-            <td>2</td>
+            <td>$300</td>
+            <td>2021/06/02</td>
           </tr>
           <tr>
-            <td>3</td>
-            <td>3</td>
-            <td>3</td>
-            <td>3</td>
-            <td>3</td>
+            <td>巧克黑森林</td>
+            <td>$600</td>
+            <td>2</td>
+            <td>$1200</td>
+            <td>2021/04/06</td>
           </tr>
           <tr style="background:rgba(0,0,0,.2)">
+            <td>草莓蛋糕(2入)</td>
+            <td>$240</td>
             <td>4</td>
-            <td>4</td>
-            <td>4</td>
-            <td>4</td>
-            <td>4</td>
+            <td>$960</td>
+            <td>2021/03/03</td>
           </tr>
           <tr>
+            <td>莓果塔</td>
+            <td>$140</td>
             <td>5</td>
-            <td>5</td>
-            <td>5</td>
-            <td>5</td>
-            <td>5</td>
+            <td>$700</td>
+            <td>2021/01/01</td>
           </tr>
 
         </table>

@@ -3,12 +3,16 @@
   <head>
     <meta charset="utf-8">
     <title>下訂單</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/common/nav.css">
     <link rel="stylesheet" href="/css/common/footer.css">
     <style media="screen">
       *{
         box-sizing:border-box;
         text-decoration:none;
+        font-family: 'Noto Sans TC', sans-serif;
       }
       main{
         width:1200px;
@@ -62,6 +66,17 @@
       main div.goods_main section div.goods_buy_data div.credit{
         /* border:1px solid red; */
       }
+      main div.goods_main section div.goods_buy_data div.credit img{
+        /* border:1px solid red; */
+        width:25px;
+        height:25px;
+        vertical-align:middle;
+        margin:0;
+
+      }
+      main div.goods_main section div.goods_buy_data div.credit input{
+        vertical-align:text-top;
+      }
       main div.goods_main section div.goods_buy_data div.credit div.credit_master,main div.goods_main section div.goods_buy_data div.credit div.credit_JCB{
         /* border:1px solid red; */
         display:inline-block;
@@ -76,16 +91,17 @@
         border-radius:15px;
       }
       main div.goods_main section div.goods_buy_data div.checkout{
-        border:1px solid red;
+        /* border:1px solid red; */
         display:inline-block;
         position:absolute;
         top:50%;
         right:-10%;
         background-color:#FF9393;
         border-radius:15px;
+        padding:2px 5px;
       }
       main div.goods_main section div.goods_buy_data div.total_price{
-        border:1px solid red;
+        /* border:1px solid red; */
         display:inline-block;
         position:absolute;
         bottom:5px;
@@ -104,9 +120,7 @@
         left:10px;
         transform:translateY(-50%);
       }
-      main div.goods_main section div.goods_buy_data input{
-        width:50px;
-      }
+
       main div.goods_introduce{
         /* border:1px solid black; */
         display:grid;
@@ -196,6 +210,7 @@
         border:5px solid pink;
         align-self: center;
         width:200px;
+        height:200px;
         border-radius: 5px;
         overflow: hidden;
       }
@@ -229,13 +244,15 @@
         </article>
 
         <section>
-          <h3>Libero consequat</h3>
+          <h3>抹茶刨冰</h3>
           <div class="goods_buy_data">
             <div class="price">
               <p>定價:200/個</p>
             </div>
             <div class="number">
-              <label for="">數量:<input type="number" name="" value=""></label>
+              <label for="">數量:
+                <input type="number" name="" value="3" style="width:50px;" oninput="if(value>10)value=10;if(value.length>2)value=value.slice(0,2);if(value<0)value=0">
+              </label>
             </div>
             <div class="rent">
               <p>是否要租用廚具:</p>
@@ -249,13 +266,13 @@
             <div class="credit">
               <p>付款方式:</p>
                 <div class="credit_master">
-                  <label for="">mater_card
-                    <img src="" alt=""><input type="radio" name="credit" value="">
+                  <label for="master">mater_card
+                    <img src="./pic/mastercard.svg" alt=""><input type="radio" name="credit" value="" id="master">
                   </label>
-                </div>
+                </div><br>
                 <div class="credit_JCB">
-                  <label for="">JCB
-                    <img src="" alt=""><input type="radio" name="credit" value="">
+                  <label for="JCB">JCB
+                    <img src="./pic/jcb.svg" alt=""><input type="radio" name="credit" value="" id="JCB">
                   </label>
                 </div>
             </div>
@@ -281,10 +298,10 @@
         </div>
         <div class="goods_introduce_text">
           <h3>商品步驟介紹</h3>
-          <p class="first_step">I:Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
-          <p class="second_step">II:Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
-          <p class="third_step">III:Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
-          <p class="forth_step">IV:Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore</p>
+          <p class="first_step">I:取一鍋，將鮮奶以中小火加熱，煮至冒出小泡泡但尚未煮滾的狀態，立即關火，備用。</p>
+          <p class="second_step">II:將抹茶粉過篩，將熱好的鮮奶倒入抹茶粉裡，用手持攪拌器拌勻，接著倒入煉乳攪勻。</p>
+          <p class="third_step" title="詳情請至影片">III:將拌勻的抹茶液過篩，保持滑順無結塊，備用。另取一碗，倒入鮮奶油，用電動攪拌器高速打發，打至堅硬...</p>
+          <p class="forth_step" title="詳情請至影片">IV:將抹茶液倒入鮮奶油中，繼續用攪拌器拌勻，放入冰箱冷凍3小時。...</p>
         </div>
       </div>
 
@@ -293,33 +310,33 @@
       <div class="goods_recommend">
 
         <div class="goods_recommend_main">
-          <h5>抹茶雪花冰</h5>
+          <h5>草莓巧克力</h5>
           <div class="goods_pic">
             <a href="#">
-              <img src="./pic/cream.png" alt="">
+              <img src="./pic/goodspic2.jpg" alt="">
             </a>
           </div>
-          <p>$200</p>
+          <p>$500</p>
         </div>
 
         <div class="goods_recommend_main">
-          <h5>抹茶雪花冰</h5>
+          <h5>綜合拼盤</h5>
           <div class="goods_pic">
             <a href="#">
-              <img src="./pic/cream.png" alt="">
+              <img src="./pic/goodspic3.jpg" alt="">
             </a>
           </div>
-          <p>$200</p>
+          <p>$800</p>
         </div>
 
         <div class="goods_recommend_main">
-          <h5>抹茶雪花冰</h5>
+          <h5>巧克力派對</h5>
           <div class="goods_pic">
             <a href="#">
-              <img src="./pic/cream.png" alt="">
+              <img src="./pic/goodspic5.jpg" alt="">
             </a>
           </div>
-          <p>$200</p>
+          <p>$850</p>
         </div>
       </div>
 

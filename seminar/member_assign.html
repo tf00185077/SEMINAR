@@ -3,11 +3,15 @@
   <head>
     <meta charset="utf-8">
     <title>會員註冊</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="/css/common/footer.css">
     <style media="screen">
       *{
-        box-sizing:border-bos;
+        box-sizing:border-box;
         text-decoration:none;
+        font-family: 'Noto Sans TC', sans-serif;
       }
       div.progress_bar{
         /* border:1px solid red; */
@@ -78,11 +82,19 @@
         border-radius:15px;
       }
       main div{
+        display:inline-block;
+        width:100%;
         display:flex;
         justify-content:center;
         align-items:center;
         gap:10px;
         vertical-align:bottom;
+      }
+      main div.password_confirm p,
+      main div.password_confirm input{
+        /* border:1px solid red; */
+        position:relative;
+        right:14px
       }
       input[type="submit"]{
         /* border:1px solid red; */
@@ -120,23 +132,23 @@
     </header>
     <main>
       <div class="name">
-        <p>您的名字:</p>
+        <p>您的名字</p>
         <input type="text" name="" value="">
       </div>
       <div class="account">
-        <p>您的帳號:</p>
+        <p>您的帳號</p>
         <input type="text" name="" value="">
       </div>
       <div class="password">
-        <p>您的密碼:</p>
+        <p>您的密碼</p>
         <input type="text" name="" value="">
       </div>
       <div class="password_confirm">
-        <p>重複確認密碼:</p>
+        <p>重複確認密碼</p>
         <input type="text" name="" value="">
       </div>
       <div class="email">
-        <p>您的信箱:</p>
+        <p>您的信箱</p>
         <input type="text" name="" value="">
       </div>
       <input type="submit" name="" value="建立帳戶">
