@@ -1,299 +1,299 @@
 <!DOCTYPE html>
 <html lang="zh-HANT" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>下訂單</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/common/nav.css">
-    <link rel="stylesheet" href="/css/common/footer.css">
-    <style media="screen">
-      *{
-        box-sizing:border-box;
-        text-decoration:none;
-        font-family: 'Noto Sans TC', sans-serif;
-      }
-      main{
-        width:1200px;
-        margin:0 auto;
-        margin-top:50px;
-      }
-      main div.goods_main{
-        /* border:1px solid red; */
-        display:grid;
-        grid-template-columns:1fr 1fr;
-        /* grid-template-rows:200px; */
-      }
-      main div.goods_main article{
-        /* border:1px solid blue; */
-        text-align:center;
-        position:relative;
-      }
-      main div.goods_main article::after{
-        content: "";
-        border-right:1px solid gray;
-        height:300px;
-        top:50px;
-        position:absolute;
-      }
-      main div.goods_main article::before{
-        content: "";
-        border-right:1px solid gray;
-        height:250px;
-        top:80px;
-        right:50px;
-        position:absolute;
-      }
-      main div.goods_main article img{
-        width:300px;
-        margin:50px;
-      }
-      main div.goods_main section{
-        /* border:1px solid yellow; */
-        text-align:center;
-      }
-      main div.goods_main section div.goods_buy_data{
-        display:inline-block;
-        /* border:1px solid red; */
-        width:300px;
-        border-radius:20px;
-        background-color:#FFFFAA;
-        text-align:left;
-        position:relative;
-        padding:10px 10px 50px 10px;
-      }
-      main div.goods_main section div.goods_buy_data div.credit{
-        /* border:1px solid red; */
-      }
-      main div.goods_main section div.goods_buy_data div.credit img{
-        /* border:1px solid red; */
-        width:25px;
-        height:25px;
-        vertical-align:middle;
-        margin:0;
+<head>
+  <meta charset="utf-8">
+  <title>下訂單</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/common/nav.css">
+  <link rel="stylesheet" href="./css/common/footer.css">
+  <style media="screen">
+  *{
+    box-sizing:border-box;
+    text-decoration:none;
+    font-family: 'Noto Sans TC', sans-serif;
+  }
+  main{
+    width:1200px;
+    margin:0 auto;
+    margin-top:50px;
+  }
+  main div.goods_main{
+    /* border:1px solid red; */
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    /* grid-template-rows:200px; */
+  }
+  main div.goods_main article{
+    /* border:1px solid blue; */
+    text-align:center;
+    position:relative;
+  }
+  main div.goods_main article::after{
+    content: "";
+    border-right:1px solid gray;
+    height:300px;
+    top:50px;
+    position:absolute;
+  }
+  main div.goods_main article::before{
+    content: "";
+    border-right:1px solid gray;
+    height:250px;
+    top:80px;
+    right:50px;
+    position:absolute;
+  }
+  main div.goods_main article img{
+    width:300px;
+    margin:50px;
+  }
+  main div.goods_main section{
+    /* border:1px solid yellow; */
+    text-align:center;
+  }
+  main div.goods_main section div.goods_buy_data{
+    display:inline-block;
+    /* border:1px solid red; */
+    width:300px;
+    border-radius:20px;
+    background-color:#FFFFAA;
+    text-align:left;
+    position:relative;
+    padding:10px 10px 50px 10px;
+  }
+  main div.goods_main section div.goods_buy_data div.credit{
+    /* border:1px solid red; */
+  }
+  main div.goods_main section div.goods_buy_data div.credit img{
+    /* border:1px solid red; */
+    width:25px;
+    height:25px;
+    vertical-align:middle;
+    margin:0;
 
-      }
-      main div.goods_main section div.goods_buy_data div.credit input{
-        vertical-align:text-top;
-      }
-      main div.goods_main section div.goods_buy_data div.credit div.credit_master,main div.goods_main section div.goods_buy_data div.credit div.credit_JCB{
-        /* border:1px solid red; */
-        display:inline-block;
-      }
-      main div.goods_main section div.goods_buy_data div.sells_car{
-        /* border:1px solid red; */
-        display:inline-block;
-        position:absolute;
-        top:30%;
-        right:-10%;
-        background-color:#FF9393;
-        border-radius:15px;
-      }
-      main div.goods_main section div.goods_buy_data div.checkout{
-        /* border:1px solid red; */
-        display:inline-block;
-        position:absolute;
-        top:50%;
-        right:-10%;
-        background-color:#FF9393;
-        border-radius:15px;
-        padding:2px 5px;
-      }
-      main div.goods_main section div.goods_buy_data div.total_price{
-        /* border:1px solid red; */
-        display:inline-block;
-        position:absolute;
-        bottom:5px;
-        left:15px;
-        height:40px;
-        background-color:#FF9393;
-        border-radius:15px;
-        width:100px;
-      }
-      main div.goods_main section div.goods_buy_data div.total_price p{
-        display:inline-block;
-        position:absolute;
-        margin:0;
-        padding:0;
-        top:50%;
-        left:10px;
-        transform:translateY(-50%);
-      }
+  }
+  main div.goods_main section div.goods_buy_data div.credit input{
+    vertical-align:text-top;
+  }
+  main div.goods_main section div.goods_buy_data div.credit div.credit_master,main div.goods_main section div.goods_buy_data div.credit div.credit_JCB{
+    /* border:1px solid red; */
+    display:inline-block;
+  }
+  main div.goods_main section div.goods_buy_data div.sells_car{
+    /* border:1px solid red; */
+    display:inline-block;
+    position:absolute;
+    top:30%;
+    right:-10%;
+    background-color:#FF9393;
+    border-radius:15px;
+  }
+  main div.goods_main section div.goods_buy_data div.checkout{
+    /* border:1px solid red; */
+    display:inline-block;
+    position:absolute;
+    top:50%;
+    right:-10%;
+    background-color:#FF9393;
+    border-radius:15px;
+    padding:2px 5px;
+  }
+  main div.goods_main section div.goods_buy_data div.total_price{
+    /* border:1px solid red; */
+    display:inline-block;
+    position:absolute;
+    bottom:5px;
+    left:15px;
+    height:40px;
+    background-color:#FF9393;
+    border-radius:15px;
+    width:100px;
+  }
+  main div.goods_main section div.goods_buy_data div.total_price p{
+    display:inline-block;
+    position:absolute;
+    margin:0;
+    padding:0;
+    top:50%;
+    left:10px;
+    transform:translateY(-50%);
+  }
 
-      main div.goods_introduce{
-        /* border:1px solid black; */
-        display:grid;
-        grid-template-columns:2fr 3fr;
-        text-align: center;
-      }
-      main div.goods_introduce h3{
-        /* border:1px solid red; */
-        margin:0;
-      }
-      main div.goods_introduce div.goods_introduce_video{
-        /* border:1px solid red; */
-        align-self: center;
-      }
-      main div.goods_introduce div.goods_introduce_text{
-        border:1px solid gray;
-        position:relative;
-        height:230px;
-        background: rgba(0,0,0,.1)
+  main div.goods_introduce{
+    /* border:1px solid black; */
+    display:grid;
+    grid-template-columns:2fr 3fr;
+    text-align: center;
+  }
+  main div.goods_introduce h3{
+    /* border:1px solid red; */
+    margin:0;
+  }
+  main div.goods_introduce div.goods_introduce_video{
+    /* border:1px solid red; */
+    align-self: center;
+  }
+  main div.goods_introduce div.goods_introduce_text{
+    border:1px solid gray;
+    position:relative;
+    height:230px;
+    background: rgba(0,0,0,.1)
 
-      }
-      main div.goods_introduce div.goods_introduce_text p{
-        /* border:1px solid red; */
-        position:absolute;
+  }
+  main div.goods_introduce div.goods_introduce_text p{
+    /* border:1px solid red; */
+    position:absolute;
 
-      }
-      main div.goods_introduce div.goods_introduce_text p.first_step{
-        /* position:absolute; */
-        width:400px;
-        height: 40px;
-        overflow:hidden;
-        top:20px;
-        left:5px;
-      }
-      main div.goods_introduce div.goods_introduce_text p.second_step{
-        /* position:absolute; */
-        width:400px;
-        height: 40px;
-        overflow:hidden;
-        top:65px;
-        left:40px;
-      }
-      main div.goods_introduce div.goods_introduce_text p.third_step{
-        /* position:absolute; */
-        width:400px;
-        height: 40px;
-        overflow:hidden;
-        top:110px;
-        left:75px;
-      }
-      main div.goods_introduce div.goods_introduce_text p.forth_step{
-        /* position:absolute; */
-        width:400px;
-        height: 40px;
-        overflow:hidden;
-        top:155px;
-        left:110px;
-      }
-      main div.goods_recommend{
-        /* border:1px solid red; */
-        text-align:center;
-        display:grid;
-        grid-template-columns: 1fr 1fr 1fr;
-        grid-template-rows: auto;
-        grid-gap:40px;
-      }
-      main div.goods_recommend_main{
-        /* border:1px solid blue; */
-        /* display:grid; */
-        grid-template-columns:1fr 1fr 1fr;
-        grid-template-rows:300px;
-      }
-      main div.goods_recommend_main div.goods_pic{
-        border:1px solid yellow;
-        border-radius: 10px;
-        /* background-color: #ffffaa; */
-        /* padding:50px; */
-        align-items: center;
-
-
+  }
+  main div.goods_introduce div.goods_introduce_text p.first_step{
+    /* position:absolute; */
+    width:400px;
+    height: 40px;
+    overflow:hidden;
+    top:20px;
+    left:5px;
+  }
+  main div.goods_introduce div.goods_introduce_text p.second_step{
+    /* position:absolute; */
+    width:400px;
+    height: 40px;
+    overflow:hidden;
+    top:65px;
+    left:40px;
+  }
+  main div.goods_introduce div.goods_introduce_text p.third_step{
+    /* position:absolute; */
+    width:400px;
+    height: 40px;
+    overflow:hidden;
+    top:110px;
+    left:75px;
+  }
+  main div.goods_introduce div.goods_introduce_text p.forth_step{
+    /* position:absolute; */
+    width:400px;
+    height: 40px;
+    overflow:hidden;
+    top:155px;
+    left:110px;
+  }
+  main div.goods_recommend{
+    /* border:1px solid red; */
+    text-align:center;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: auto;
+    grid-gap:40px;
+  }
+  main div.goods_recommend_main{
+    /* border:1px solid blue; */
+    /* display:grid; */
+    grid-template-columns:1fr 1fr 1fr;
+    grid-template-rows:300px;
+  }
+  main div.goods_recommend_main div.goods_pic{
+    border:1px solid yellow;
+    border-radius: 10px;
+    /* background-color: #ffffaa; */
+    /* padding:50px; */
+    align-items: center;
 
 
-        /* position:relative; */
-      }
-      main div.goods_recommend_main div.goods_pic img{
-        display:inline-block;
-        border:5px solid pink;
-        align-self: center;
-        width:200px;
-        height:200px;
-        border-radius: 5px;
-        overflow: hidden;
-      }
 
-    </style>
-  </head>
-  <body>
-    <header>
-      <nav class="">
-        <a href="#">
-          <img src="./pic/onlinekitchen_text.png" alt="">
-        </a>
-        <div>
-          <input type="text" name="" value="" placeholder="請輸入欲查詢的名稱">
-          <img src="./pic/searchicon.png" alt="">
-        </div>
-        <ul>
-          <li><a href="./goods.html">隨便看看</a></li>
-          <li><a href="./member_assign.html">註冊/登入</a></li>
-          <li><a href="./member_shopping_car.html">購物車</a></li>
-          <li><a href="./member_file.html">會員紀錄</a></li>
-        </ul>
-      </nav>
-    </header>
 
-    <main>
-      <div class="goods_main">
+    /* position:relative; */
+  }
+  main div.goods_recommend_main div.goods_pic img{
+    display:inline-block;
+    border:5px solid pink;
+    align-self: center;
+    width:200px;
+    height:200px;
+    border-radius: 5px;
+    overflow: hidden;
+  }
 
-        <article class="goods_pic">
-          <img src="./pic/cream.png" alt="">
-        </article>
+  </style>
+</head>
+<body>
+  <header>
+    <nav class="">
+      <a href="#">
+        <img src="./pic/onlinekitchen_text.png" alt="">
+      </a>
+      <div>
+        <input type="text" name="" value="" placeholder="請輸入欲查詢的名稱">
+        <img src="./pic/searchicon.png" alt="">
+      </div>
+      <ul>
+        <li><a href="./goods.html">隨便看看</a></li>
+        <li><a href="./member_assign.html">註冊/登入</a></li>
+        <li><a href="./member_shopping_car.html">購物車</a></li>
+        <li><a href="./member_file.html">會員紀錄</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <section>
-          <h3>抹茶刨冰</h3>
-          <div class="goods_buy_data">
-            <div class="price">
-              <p>定價:200/個</p>
-            </div>
-            <div class="number">
-              <label for="">數量:
-                <input type="number" name="" value="3" style="width:50px;" oninput="if(value>10)value=10;if(value.length>2)value=value.slice(0,2);if(value<0)value=0">
+  <main>
+    <div class="goods_main">
+
+      <article class="goods_pic">
+        <img src="./pic/cream.png" alt="">
+      </article>
+
+      <section>
+        <h3>抹茶刨冰</h3>
+        <div class="goods_buy_data">
+          <div class="price">
+            <p>定價:200/個</p>
+          </div>
+          <div class="number">
+            <label for="">數量:
+              <input type="number" name="" value="3" style="width:50px;" oninput="if(value>10)value=10;if(value.length>2)value=value.slice(0,2);if(value<0)value=0">
+            </label>
+          </div>
+          <div class="rent">
+            <p>是否要租用廚具:</p>
+            <label>鍋
+              <input type="checkbox" name="" value="">
+            </label>
+            <label>鏟
+              <input type="checkbox" name="" value="">
+            </label>
+          </div>
+          <div class="credit">
+            <p>付款方式:</p>
+            <div class="credit_master">
+              <label for="master">mater_card
+                <img src="./pic/mastercard.svg" alt=""><input type="radio" name="credit" value="" id="master">
               </label>
-            </div>
-            <div class="rent">
-              <p>是否要租用廚具:</p>
-              <label>鍋
-                <input type="checkbox" name="" value="">
+            </div><br>
+            <div class="credit_JCB">
+              <label for="JCB">JCB
+                <img src="./pic/jcb.svg" alt=""><input type="radio" name="credit" value="" id="JCB">
               </label>
-              <label>鏟
-                <input type="checkbox" name="" value="">
-              </label>
-            </div>
-            <div class="credit">
-              <p>付款方式:</p>
-                <div class="credit_master">
-                  <label for="master">mater_card
-                    <img src="./pic/mastercard.svg" alt=""><input type="radio" name="credit" value="" id="master">
-                  </label>
-                </div><br>
-                <div class="credit_JCB">
-                  <label for="JCB">JCB
-                    <img src="./pic/jcb.svg" alt=""><input type="radio" name="credit" value="" id="JCB">
-                  </label>
-                </div>
-            </div>
-            <div class="sells_car">
-              <p>加到購物車</p>
-            </div>
-            <div class="checkout">
-              <p><a href="./pay.html">結帳單筆</a></p>
-            </div>
-            <div class="total_price">
-              <p>總金額:600</p>
             </div>
           </div>
-        </section>
-      </div>
-      <hr>
-      <hr>
-      <div class="goods_introduce">
-        <div class="goods_introduce_video">
-          <video muted controls width="300px" >
-            <source src="./video/movie1.mp4" type="video/mp4">
+          <div class="sells_car">
+            <p>加到購物車</p>
+          </div>
+          <div class="checkout">
+            <p><a href="./pay.html">結帳單筆</a></p>
+          </div>
+          <div class="total_price">
+            <p>總金額:600</p>
+          </div>
+        </div>
+      </section>
+    </div>
+    <hr>
+    <hr>
+    <div class="goods_introduce">
+      <div class="goods_introduce_video">
+        <video muted controls width="300px" >
+          <source src="./video/movie1.mp4" type="video/mp4">
           </video>
         </div>
         <div class="goods_introduce_text">
@@ -348,4 +348,4 @@
       </div>
     </footer>
   </body>
-</html>
+  </html>

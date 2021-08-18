@@ -1,320 +1,320 @@
 <!DOCTYPE html>
 <html lang="zh-HANT" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title>付款確認頁</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/common/footer.css">
-    <link rel="stylesheet" href="/css/common/progress_bar.css">
-    <style>
-    *{
-      box-sizing:border-box;
-      /* margin:0; */
-      /* padding:0; */
-      /* width:1200px; */
-      text-decoration:none;
-      font-family: 'Noto Sans TC', sans-serif;
-    }
+<head>
+  <meta charset="utf-8">
+  <title>付款確認頁</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/common/footer.css">
+  <link rel="stylesheet" href="./css/common/progress_bar.css">
+  <style>
+  *{
+    box-sizing:border-box;
+    /* margin:0; */
+    /* padding:0; */
+    /* width:1200px; */
+    text-decoration:none;
+    font-family: 'Noto Sans TC', sans-serif;
+  }
 
 
-    div.pay_way_outline{
-      /* border:1px solid red; */
-      margin:0 auto;
-      width:600px;
-    }
-    div.pay_way_outline>div.pay_way{
-      border:1px solid black;
-      border-bottom:1px solid #ffffaa;
-      width:80px;
-      height:50px;
-      border-radius:5px 5px 0 0;
-      text-align:center;
-      position:relative;
-      background-color:#ffffaa;
-    }
-    div.pay_way_outline>div.pay_way>h3{
-      position:absolute;
-      top:-6px;
-    }
-    div.pay_way_outline div.pay_way_choose{
-      border:1px solid black;
-      background-color:#ffffaa;
-    }
-    div.pay_way_outline div.pay_way_choose label{
-      /* border:1px solid green; */
-      margin-right:20px;
-      padding:2px 5px;
-    }
-    main div.pay_data_outline{
-      /* border:1px solid red; */
-      width:600px;
-      margin:0 auto;
-      margin-top:30px;
-    }
-    main div.pay_data_outline div.pay_data{
-      border:1px solid black;
-      border-bottom:1px solid #ffffaa;
-      width:80px;
-      height:50px;
-      border-radius:5px 5px 0 0;
-      text-align:center;
-      position:relative;
-      background-color:#ffffaa;
-    }
-    main div.pay_data_outline div.pay_data>h3{
-      /* border:1px solid yellow; */
-      position:absolute;
-      top:-6px;
-    }
-    main div.pay_data_write{
-      border:1px solid black;
-      background-color:#ffffaa;
-      text-align:tops;
-      display:grid;
-      grid-template-areas:"name tax_adress" "phone tax_adress" "email goods_adress" "creditcard goods_adress" "creditcard goods_adress"
-    }
-    main div.pay_data_write div{
-      margin:10px 20px 10px 0;
-      /* align-self:top */
-      padding:2px;
-    }
-    main div.pay_data_write div.name{
-      grid-area:name;
-      /* border:1px solid red; */
-    }
-    main div.pay_data_write div.phone{
-      grid-area:phone;
-    }
-    main div.pay_data_write div.Email{
-      grid-area:email;
-    }
-    main div.pay_data_write div.creditcard{
-      grid-area:creditcard;
+  div.pay_way_outline{
+    /* border:1px solid red; */
+    margin:0 auto;
+    width:600px;
+  }
+  div.pay_way_outline>div.pay_way{
+    border:1px solid black;
+    border-bottom:1px solid #ffffaa;
+    width:80px;
+    height:50px;
+    border-radius:5px 5px 0 0;
+    text-align:center;
+    position:relative;
+    background-color:#ffffaa;
+  }
+  div.pay_way_outline>div.pay_way>h3{
+    position:absolute;
+    top:-6px;
+  }
+  div.pay_way_outline div.pay_way_choose{
+    border:1px solid black;
+    background-color:#ffffaa;
+  }
+  div.pay_way_outline div.pay_way_choose label{
+    /* border:1px solid green; */
+    margin-right:20px;
+    padding:2px 5px;
+  }
+  main div.pay_data_outline{
+    /* border:1px solid red; */
+    width:600px;
+    margin:0 auto;
+    margin-top:30px;
+  }
+  main div.pay_data_outline div.pay_data{
+    border:1px solid black;
+    border-bottom:1px solid #ffffaa;
+    width:80px;
+    height:50px;
+    border-radius:5px 5px 0 0;
+    text-align:center;
+    position:relative;
+    background-color:#ffffaa;
+  }
+  main div.pay_data_outline div.pay_data>h3{
+    /* border:1px solid yellow; */
+    position:absolute;
+    top:-6px;
+  }
+  main div.pay_data_write{
+    border:1px solid black;
+    background-color:#ffffaa;
+    text-align:tops;
+    display:grid;
+    grid-template-areas:"name tax_adress" "phone tax_adress" "email goods_adress" "creditcard goods_adress" "creditcard goods_adress"
+  }
+  main div.pay_data_write div{
+    margin:10px 20px 10px 0;
+    /* align-self:top */
+    padding:2px;
+  }
+  main div.pay_data_write div.name{
+    grid-area:name;
+    /* border:1px solid red; */
+  }
+  main div.pay_data_write div.phone{
+    grid-area:phone;
+  }
+  main div.pay_data_write div.Email{
+    grid-area:email;
+  }
+  main div.pay_data_write div.creditcard{
+    grid-area:creditcard;
 
-    }
-    main div.pay_data_write div.tax_adress{
-      grid-area:tax_adress;
-    }
-    main div.pay_data_write div.goods_adress{
-      grid-area:goods_adress;
-    }
-    main div.store{
-      /* border:1px solid red; */
-      width:600px;
-      margin:0 auto;
-      margin-top:30px;
-    }
-    main div.store div.seven_eleven{
-      border:1px solid black;
-      border-bottom:1px solid #ffffaa;
-      width:120px;
-      height:50px;
-      border-radius:5px 5px 0 0;
-      text-align:center;
-      position:relative;
-      background-color:#ffffaa;
-    }
-    main div.store div.seven_eleven>h3{
-      position:absolute;
-      top:-6px;
-      left:2px;
-    }
-    main div.store div.seven_eleven_choose{
-      border:1px solid black;
-      background-color:#ffffaa;
-    }
-    main div.step{
-      /* border:1px solid red; */
-      position:relative;
-      margin:0 auto;
-      margin-top:20px;
-      width:600px;
-      height:80px;
-    }
-    main div.step div.next_step{
-      border:1px solid black;
-      display:inline-block;
-      position:absolute;
-      right:0;
-      border-radius:10px;
-      background-color:#ffffaa;
-      height:30px;
-      width:80px;
-      text-align:center;
+  }
+  main div.pay_data_write div.tax_adress{
+    grid-area:tax_adress;
+  }
+  main div.pay_data_write div.goods_adress{
+    grid-area:goods_adress;
+  }
+  main div.store{
+    /* border:1px solid red; */
+    width:600px;
+    margin:0 auto;
+    margin-top:30px;
+  }
+  main div.store div.seven_eleven{
+    border:1px solid black;
+    border-bottom:1px solid #ffffaa;
+    width:120px;
+    height:50px;
+    border-radius:5px 5px 0 0;
+    text-align:center;
+    position:relative;
+    background-color:#ffffaa;
+  }
+  main div.store div.seven_eleven>h3{
+    position:absolute;
+    top:-6px;
+    left:2px;
+  }
+  main div.store div.seven_eleven_choose{
+    border:1px solid black;
+    background-color:#ffffaa;
+  }
+  main div.step{
+    /* border:1px solid red; */
+    position:relative;
+    margin:0 auto;
+    margin-top:20px;
+    width:600px;
+    height:80px;
+  }
+  main div.step div.next_step{
+    border:1px solid black;
+    display:inline-block;
+    position:absolute;
+    right:0;
+    border-radius:10px;
+    background-color:#ffffaa;
+    height:30px;
+    width:80px;
+    text-align:center;
 
-    }
-    main div.step div.previous_step{
-      border:1px solid black;
-      display:inline-block;
-      position:absolute;
-      right:100px;
-      border-radius:10px;
-      background-color:#ffffaa;
-      height:30px;
-      width:80px;
-      text-align:center;
-    }
-    main div.step div.previous_step h3, main div.step div.next_step h3{
-      margin:0;
-    }
-    div.goods_confirm_outline{
-      border:1px solid black;
-      margin:0 auto;
-      margin-bottom:20px;
-      width:400px;
-      height:100px;
-      position:relative;
-      background-color:#ffffaa;
-    }
-    div.goods_confirm_outline img{
-      border:2px solid #ffffaa;
-      border-bottom:1px solid black;
-      width:100px;
-      position:absolute;
-      top:0;
-      left:0;
-    }
-    div.goods_confirm_main{
-      display:flex;
-      justify-content:center;
-      align-items:center;
-    }
-    div.goods_confirm_main h3{
-      position:absolute;
-    }
-    div.goods_confirm_main h3.title{
-      top:0px;
-      left:50%;
-    }
-    div.goods_confirm_main h3.price{
-      bottom:0;
-      left:100px;
-    }
-    div.goods_confirm_main h3.number{
-      bottom:0;
-      left:200px;
-    }
-    div.goods_confirm_main h3.total_price{
-      display:inline-block;
-      width:100px;
-      bottom:0;
-      left:290px;
-    }
-    </style>
-  </head>
-  <body>
-    <header>
-      <div class="progress_bar">
-        <div class="progess_line"></div>
-        <div class="progress_bar_first">
-          <p>選擇</p>
-        </div>
-        <div class="progress_bar_second">
-          <p>付款</p>
-        </div>
-        <div class="progress_bar_third">
-          <p>確認</p>
-        </div>
-        <div class="progress_bar_forth">
-          <p>完成</p>
-        </div>
+  }
+  main div.step div.previous_step{
+    border:1px solid black;
+    display:inline-block;
+    position:absolute;
+    right:100px;
+    border-radius:10px;
+    background-color:#ffffaa;
+    height:30px;
+    width:80px;
+    text-align:center;
+  }
+  main div.step div.previous_step h3, main div.step div.next_step h3{
+    margin:0;
+  }
+  div.goods_confirm_outline{
+    border:1px solid black;
+    margin:0 auto;
+    margin-bottom:20px;
+    width:400px;
+    height:100px;
+    position:relative;
+    background-color:#ffffaa;
+  }
+  div.goods_confirm_outline img{
+    border:2px solid #ffffaa;
+    border-bottom:1px solid black;
+    width:100px;
+    position:absolute;
+    top:0;
+    left:0;
+  }
+  div.goods_confirm_main{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+  div.goods_confirm_main h3{
+    position:absolute;
+  }
+  div.goods_confirm_main h3.title{
+    top:0px;
+    left:50%;
+  }
+  div.goods_confirm_main h3.price{
+    bottom:0;
+    left:100px;
+  }
+  div.goods_confirm_main h3.number{
+    bottom:0;
+    left:200px;
+  }
+  div.goods_confirm_main h3.total_price{
+    display:inline-block;
+    width:100px;
+    bottom:0;
+    left:290px;
+  }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="progress_bar">
+      <div class="progess_line"></div>
+      <div class="progress_bar_first">
+        <p>選擇</p>
       </div>
-
-    </header>
-
-    <div class="goods_confirm_outline">
-      <div class="goods_confirm_main">
-        <img src="./pic/cream.png" alt="">
-        <h3 class="title">抹茶刨冰</h3>
-        <h3 class="price">單價:$350</h3>
-        <h3 class="number">數量:3</h3>
-        <h3 class="total_price">總金額:1050</h3>
-        <div class="how_much">
-        </div>
+      <div class="progress_bar_second">
+        <p>付款</p>
+      </div>
+      <div class="progress_bar_third">
+        <p>確認</p>
+      </div>
+      <div class="progress_bar_forth">
+        <p>完成</p>
       </div>
     </div>
 
-    <main>
-      <div class="pay_way_outline">
-        <div class="pay_way">
-          <h3>付款方式</h3>
-        </div>
-        <div class="pay_way_choose">
-          <label>  <input type="radio" name="pay_way" value="">Mastercard</label>
-          <label><input type="radio" name="pay_way" value="">7-11取貨付款</label>
-          <label><input type="radio" name="pay_way" value="">VISA</label>
-        </div>
-      </div>
+  </header>
 
-      <div class="pay_data_outline">
-        <div class="pay_data">
-          <h3>付款資訊</h3>
-        </div>
-        <div class="pay_data_write">
-          <div class="name">
-            <label>姓名:
-              <br>
-              <input type="text" name="" value=""></label>
+  <div class="goods_confirm_outline">
+    <div class="goods_confirm_main">
+      <img src="./pic/cream.png" alt="">
+      <h3 class="title">抹茶刨冰</h3>
+      <h3 class="price">單價:$350</h3>
+      <h3 class="number">數量:3</h3>
+      <h3 class="total_price">總金額:1050</h3>
+      <div class="how_much">
+      </div>
+    </div>
+  </div>
+
+  <main>
+    <div class="pay_way_outline">
+      <div class="pay_way">
+        <h3>付款方式</h3>
+      </div>
+      <div class="pay_way_choose">
+        <label>  <input type="radio" name="pay_way" value="">Mastercard</label>
+        <label><input type="radio" name="pay_way" value="">7-11取貨付款</label>
+        <label><input type="radio" name="pay_way" value="">VISA</label>
+      </div>
+    </div>
+
+    <div class="pay_data_outline">
+      <div class="pay_data">
+        <h3>付款資訊</h3>
+      </div>
+      <div class="pay_data_write">
+        <div class="name">
+          <label>姓名:
+            <br>
+            <input type="text" name="" value=""></label>
           </div>
           <div class="phone">
             <label>手機:
               <br><input type="text" name="" value=""></label>
-          </div>
-          <div class="Email">
-            <label>Email:<input type="text" name="" value=""></label>
-          </div>
-          <div class="credircard">
-            <label>信用卡卡號
+            </div>
+            <div class="Email">
+              <label>Email:<input type="text" name="" value=""></label>
+            </div>
+            <div class="credircard">
+              <label>信用卡卡號
+                <br>
+                <input type="text" name="" value="" maxlength="4" style="width:40px;">
+                <input type="text" name="" value="" maxlength="4" style="width:40px;">
+                <input type="text" name="" value="" maxlength="4" style="width:40px;">
+                <input type="text" name="" value="" maxlength="4" style="width:40px;">
+              </label>
               <br>
-              <input type="text" name="" value="" maxlength="4" style="width:40px;">
-              <input type="text" name="" value="" maxlength="4" style="width:40px;">
-              <input type="text" name="" value="" maxlength="4" style="width:40px;">
-              <input type="text" name="" value="" maxlength="4" style="width:40px;">
-            </label>
-            <br>
-            <label>安全碼
-              <br> <input type="text" name="" value="" maxlength="3" style="width:30px;"></label>
+              <label>安全碼
+                <br> <input type="text" name="" value="" maxlength="3" style="width:30px;"></label>
+              </div>
+              <div class="tax_adress">
+                <label>帳單地址:<input type="text" name="" value="" style="height:60px;width:300px;"></label>
+              </div>
+              <div class="goods_adress">
+                <label>收貨地址:<input type="text" name="" value="" style="height:60px; width:300px;"></label>
+              </div>
+            </div>
           </div>
-          <div class="tax_adress">
-            <label>帳單地址:<input type="text" name="" value="" style="height:60px;width:300px;"></label>
+
+          <div class="store">
+            <div class="seven_eleven">
+              <h3>7-11店家選擇</h3>
+            </div>
+            <div class="seven_eleven_choose">
+              <select>
+                <option>北投</option>
+                <option>士林</option>
+                <option>天母</option>
+                <option>芝山</option>
+              </select>
+            </div>
           </div>
-          <div class="goods_adress">
-            <label>收貨地址:<input type="text" name="" value="" style="height:60px; width:300px;"></label>
+
+          <div class="step">
+            <div class="previous_step">
+              <h3><a href="./pay.html">上一步</a></h3>
+            </div>
+            <div class="next_step">
+              <h3>下一步</h3>
+            </div>
           </div>
-        </div>
-      </div>
 
-      <div class="store">
-        <div class="seven_eleven">
-          <h3>7-11店家選擇</h3>
-        </div>
-        <div class="seven_eleven_choose">
-          <select>
-            <option>北投</option>
-            <option>士林</option>
-            <option>天母</option>
-            <option>芝山</option>
-          </select>
-        </div>
-      </div>
+        </main>
 
-      <div class="step">
-        <div class="previous_step">
-          <h3><a href="./pay.html">上一步</a></h3>
-        </div>
-        <div class="next_step">
-          <h3>下一步</h3>
-        </div>
-      </div>
-
-    </main>
-
-    <footer>
-      <div class="copyriht">
-        <p>&copy 僅供緯育tibeme教學之用</p>
-      </div>
-    </footer>
-  </body>
-</html>
+        <footer>
+          <div class="copyriht">
+            <p>&copy 僅供緯育tibeme教學之用</p>
+          </div>
+        </footer>
+      </body>
+      </html>

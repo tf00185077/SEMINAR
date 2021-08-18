@@ -1,167 +1,167 @@
 <!DOCTYPE html>
 <html lang="zh-HANT" dir="ltr">
-  <head>
-    <meta charset="utf-8">
-    <title></title>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="/css/common/footer.css">
-    <link rel="stylesheet" href="/css/common/progress_bar.css">
-    <style media="screen">
-      *{
-        box-sizing:border-box;
-        font-family: 'Noto Sans TC', sans-serif;
-        text-decoration: none;
-      }
-      body{
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./css/common/footer.css">
+  <link rel="stylesheet" href="./css/common/progress_bar.css">
+  <style media="screen">
+  *{
+    box-sizing:border-box;
+    font-family: 'Noto Sans TC', sans-serif;
+    text-decoration: none;
+  }
+  body{
 
-        justify-content:center;
-        align-items:center;
-        min-height:100vh;
-        background:#161623;
-      }
-      body:before{
-        content:"";
-        position:absolute;
-        top:0;
-        left:0;
-        width:100%;
-        height:100%;
-        background-image:linear-gradient(#f00,#f0f);
-        clip-path:circle(30% at right 70%);
-      }
-      /* body:after{
-        content:"";
-        position:absolute;
-        top:0;
-        left:0;
-        width:100%;
-        height:100%;
-        background-image:linear-gradient(#2196f3,#e91e63);
-        clip-path:circle(20% at 10% 10%);
-      } */
-      body{
-        margin:0 auto;
-        width:1200px;
-      }
-      div.container{
-        position:relative;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        max-width:1200px;
-        flex-wrap:wrap;
-        z-index:1;
-      }
-      div.container div.card{
-        position:relative;
-        width:280px;
-        height:400px;
-        margin:30px;
-        box-shadow:20px 20px 50px rgba(0,0,0,.5);
-        border-radius:15px;
-        background:rgba(255,255,255,.2);
-        overflow:hidden;
-        display:flex;
-        justify-content:center;
-        align-items:center;
-        border-top:2px solid rgba(255,255,255,.4);
-        border-left:1px solid rgba(255,255,255,.5);
-        backdrop-filter:blur(5px);
-      }
-      div.container div.card div.content{
-        padding:20px;
-        text-align:center;
-        transform:translateY(100px);
-        opacity:0;
-        transition:.5s;
-      }
-      div.container div.card:hover div.content{
-        transform:translateY(0px);
-        opacity:1
-      }
-      div.container div.card div.content h2{
-        position:absolute;
-        top:-150px;
-        right:0px;
-        font-size:8em;
-        color:rgba(255,255,255,.5);
-        pointer-events:none;
-      }
-      div.container div.card div.content h3{
-        font-size:1.8em;
-        color:#000;
-        z-index:1;
-      }
-      div.container div.card div.content p{
-        font-size:1.6em;
-        color:#000;
-        font-weight:300;
-      }
-      div.container div.card div.content a{
-        position:relative;
-        display:inline-block;
-        padding:8px 20px;
-        margin:15px;
-        background:rgba(255,255,255,.1);
-        color:#000;
-        border-radius:20px;
-        text-decoration:none;
-        font-weight:500;
-        box-shadow:0 5px 15px rgba(0,0,0,.2);
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
+    background:#161623;
+  }
+  body:before{
+    content:"";
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    background-image:linear-gradient(#f00,#f0f);
+    clip-path:circle(30% at right 70%);
+  }
+  /* body:after{
+  content:"";
+  position:absolute;
+  top:0;
+  left:0;
+  width:100%;
+  height:100%;
+  background-image:linear-gradient(#2196f3,#e91e63);
+  clip-path:circle(20% at 10% 10%);
+  } */
+  body{
+    margin:0 auto;
+    width:1200px;
+  }
+  div.container{
+    position:relative;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    max-width:1200px;
+    flex-wrap:wrap;
+    z-index:1;
+  }
+  div.container div.card{
+    position:relative;
+    width:280px;
+    height:400px;
+    margin:30px;
+    box-shadow:20px 20px 50px rgba(0,0,0,.5);
+    border-radius:15px;
+    background:rgba(255,255,255,.2);
+    overflow:hidden;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    border-top:2px solid rgba(255,255,255,.4);
+    border-left:1px solid rgba(255,255,255,.5);
+    backdrop-filter:blur(5px);
+  }
+  div.container div.card div.content{
+    padding:20px;
+    text-align:center;
+    transform:translateY(100px);
+    opacity:0;
+    transition:.5s;
+  }
+  div.container div.card:hover div.content{
+    transform:translateY(0px);
+    opacity:1
+  }
+  div.container div.card div.content h2{
+    position:absolute;
+    top:-150px;
+    right:0px;
+    font-size:8em;
+    color:rgba(255,255,255,.5);
+    pointer-events:none;
+  }
+  div.container div.card div.content h3{
+    font-size:1.8em;
+    color:#000;
+    z-index:1;
+  }
+  div.container div.card div.content p{
+    font-size:1.6em;
+    color:#000;
+    font-weight:300;
+  }
+  div.container div.card div.content a{
+    position:relative;
+    display:inline-block;
+    padding:8px 20px;
+    margin:15px;
+    background:rgba(255,255,255,.1);
+    color:#000;
+    border-radius:20px;
+    text-decoration:none;
+    font-weight:500;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
 
-      }
-      div.progress_bar>div{
-        background-color:rgba(255,255,170,.5);
-        border-radius:50%;
-        width:20px;
-        height:20px;
-        position:relative;
-        /* display:flex; */
-        /* justify-content:center; */
-        /* align-items:center; */
-        text-align:center;
-        /* border:1px solid red; */
-      }
-      div.progress_bar>div:nth-child(3){
-        background-color:rgba(255,255,170,.5);
+  }
+  div.progress_bar>div{
+    background-color:rgba(255,255,170,.5);
+    border-radius:50%;
+    width:20px;
+    height:20px;
+    position:relative;
+    /* display:flex; */
+    /* justify-content:center; */
+    /* align-items:center; */
+    text-align:center;
+    /* border:1px solid red; */
+  }
+  div.progress_bar>div:nth-child(3){
+    background-color:rgba(255,255,170,.5);
 
-      }
-      div.progress_bar>div:nth-child(1){
-        background-color:rgba(253,162,163,.5);
+  }
+  div.progress_bar>div:nth-child(1){
+    background-color:rgba(253,162,163,.5);
 
-      }
-      div.progress_bar>div>p{
-        /* border:1px solid red; */
-        width:30px;
-        transform:translateX(-40%);
-        color:#fff;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="progress_bar">
-      <div class="progress_bar_first">
-        <p>選擇</p>
-      </div>
-      <div class="progress_bar_second">
-        <p>填寫</p>
-      </div>
-      <div class="progress_bar_third">
-        <p>確認</p>
-      </div>
-
+  }
+  div.progress_bar>div>p{
+    /* border:1px solid red; */
+    width:30px;
+    transform:translateX(-40%);
+    color:#fff;
+  }
+  </style>
+</head>
+<body>
+  <div class="progress_bar">
+    <div class="progress_bar_first">
+      <p>選擇</p>
     </div>
-    <div class="container">
-      <div class="card">
-        <div class="content">
-          <h2>I</h2>
-          <h3>PlanI</h3>
-          <p>會員期限無期限<br>
-            註冊及入會<br>
-            不享紅利集點優惠<br>
-            無生日禮金</p>
+    <div class="progress_bar_second">
+      <p>填寫</p>
+    </div>
+    <div class="progress_bar_third">
+      <p>確認</p>
+    </div>
+
+  </div>
+  <div class="container">
+    <div class="card">
+      <div class="content">
+        <h2>I</h2>
+        <h3>PlanI</h3>
+        <p>會員期限無期限<br>
+          註冊及入會<br>
+          不享紅利集點優惠<br>
+          無生日禮金</p>
           <a href="./member_assign.html">決定</a>
         </div>
       </div>
@@ -170,13 +170,13 @@
           <h2>II</h2>
           <h3>PlanII</h3>
           <p>會員期限 $300/年<br>
-          享會員專屬紅利優惠<br>
-        享有生日禮金及專屬折價券。</p>
-          <a href="./member_assign.html">決定</a>
+            享會員專屬紅利優惠<br>
+            享有生日禮金及專屬折價券。</p>
+            <a href="./member_assign.html">決定</a>
+          </div>
         </div>
+
       </div>
 
-    </div>
-
-  </body>
-</html>
+    </body>
+    </html>
